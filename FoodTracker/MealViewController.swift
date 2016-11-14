@@ -2,9 +2,7 @@
 //  MealViewController.swift
 //  FoodTracker
 //
-//  Created by Jane Appleseed on 5/23/15.
-//  Copyright © 2015 Apple Inc. All rights reserved.
-//  See LICENSE.txt for this sample’s licensing information.
+//  Created by Tim Clifford on 15/11/2016.
 //
 
 import UIKit
@@ -29,6 +27,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         
+        // Set up views if editing an existing Meal.
         if let meal = meal {
             navigationItem.title = meal.name
             nameTextField.text   = meal.name
@@ -83,14 +82,14 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     // MARK: Navigation
-    @IBAction func cancel(sender: UIBarButtonItem) {
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
         // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
         let isPresentingInAddMealMode = presentingViewController is UINavigationController
         
         if isPresentingInAddMealMode {
             dismiss(animated: true, completion: nil)
-        }
-        else {
+        } else {
             navigationController!.popViewController(animated: true)
         }
     }

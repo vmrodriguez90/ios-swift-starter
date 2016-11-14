@@ -2,8 +2,7 @@
 //  FoodTrackerTests.swift
 //  FoodTrackerTests
 //
-//  Created by Jane Appleseed on 5/23/15.
-//  Copyright © 2015 Apple Inc. All rights reserved.
+//  Created by Tim Clifford on 15/11/2016.
 //
 
 import XCTest
